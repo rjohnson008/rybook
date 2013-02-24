@@ -1,0 +1,18 @@
+$btnPrimaryBackground: green;
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+$linkColor: #08c;
+
+@import "bootstrap";
+
+body {
+	background: white;
+	padding-top: 60px;
+}
+
+@import "bootstrap-responsive";
+
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+}
