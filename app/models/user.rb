@@ -9,4 +9,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                           :first_name, :last_name, :profile_name
   # attr_accessible :title, :body
+
+  # A user can have many statuses
+  has_many :statuses
+
+  def full_name
+      return first_name + " " + last_name
+  end
 end
