@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   						    	  # Regular expression that makes sure name is formatted correctly.
   						    	  # Allows lower case letters, upper case letters, numbers, under-
   						    	  # scores and dashes.
-  						    	  with: /a-zA-Z0-9_-/,
+  						    	  with: /^[a-zA-Z0-9_-]+$/,
   						    	  message: 'Must be formatted correctly.'
                                       }
 
