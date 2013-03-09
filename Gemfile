@@ -5,15 +5,17 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 
-
-group :production do
-  gem 'pg'
+group :test do
+  gem 'shoulda'
 end
 
 group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
