@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
                                       }
 
   # A user can have many statuses
-  has_many :statuses
+  has_many :statuses, :user_friendships
+  has_many :friends, through: :user_friendships
 
   def full_name
       return first_name + " " + last_name
